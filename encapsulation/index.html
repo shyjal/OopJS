@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	  <title>Encapsulation</title> 
+	</head>
+
+	<body>
+	
+	<div>
+		<button onclick="getVehicleInfo()">Get Details</button>
+	</div>
+	<script src="vehicle.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	function getVehicleInfo () {
+		var vehicle = new Vehicle();
+		vehicle.init('car',4);
+		console.log(vehicle.print());
+		console.log('Color --> '+vehicle.color);
+		console.log('Number of wheels --> '+vehicle.numWheels);
+	}
+	</script>
+	</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	  <title>Access Modifiers</title> 
+	</head>
+
+	<body>
+	
+	<div>
+		<button onclick="getVehicleInfo('car')">Vehicle</button>
+	</div>
+	
+	<script src="vehicle.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+	    function getVehicleInfo (type) {
+	    	
+	    	var vehicle = new Vehicle();
+	    	console.log('Public vehicleName --> '+vehicle.vehicleName);
+	    	console.log('Private _color --> '+vehicle._color);
+	    	console.log('Public getter --> '+vehicle.getColor());
+	    	
+	    	console.log('Set color as Red using setter');
+	    	vehicle.setColor('Red');
+	    	console.log('Public getter --> '+vehicle.getColor());
+
+	    	console.log('Creates object vehicle1');
+	    	var vehicle1 = new Vehicle();
+	    	vehicle1.setColor('Black');
+	    	console.log('Object vehicle color --> '+vehicle.getColor()+' --- Object vehicle1 color --> '+vehicle1.getColor());
+
+	    	// Static variable
+	    	vehicle.setVariant("RXE");
+	    	console.log('Object vehicle variant --> '+vehicle.getVariant());
+			console.log('Set vehicle1 variant');
+			vehicle1.setVariant("RXL");
+
+			console.log('Object vehicle variant --> '+vehicle.getVariant()+' --- Object vehicle1 variant --> '+vehicle1.getVariant());
+	    }
+	</script>
+	</body>
+</html>

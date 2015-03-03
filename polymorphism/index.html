@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	  <title>Polymorphism</title> 
+	</head>
+
+	<body>
+	
+	<div>
+		<button onclick="getTeacherInfo()">Teacher</button>
+		<button onclick="getStudentInfo()">Student</button>
+	</div>
+	
+	<script src="person.js" type="text/javascript"></script>
+	<script src="student.js" type="text/javascript"></script>
+	<script src="teacher.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+	    function getTeacherInfo() {
+	    	var teacher = new Teacher();
+	    	console.log(teacher.getInfo());
+	    }
+	    function getStudentInfo () {
+	    	var student = new Student();
+	    	console.log(student.getInfo());
+	    }
+	</script>
+	</body>
+</html>
